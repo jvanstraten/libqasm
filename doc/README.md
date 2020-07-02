@@ -14,6 +14,9 @@ File/directory list:
  - `Doxyfile`, `DoxygenLayout.xml`: Doxygen configuration. Note that the Sphinx
    build will chain to Doxygen and include it in its output.
 
+ - `requirements.txt`: build requirements file (Python packages) used by
+   ReadTheDocs.
+
  - `source`: source files for the Sphinx part of the documentation.
 
  - `old`: outdated documentation that may still be useful to someone.
