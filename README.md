@@ -1,6 +1,10 @@
 
 # libQASM: Library to parse cQASM v1.0 files
 
+[![CI](https://github.com/QE-Lab/libqasm/workflows/Test/badge.svg)](https://github.com/qe-lab/libqasm/actions)
+[![PyPI](https://badgen.net/pypi/v/libQasm)](https://pypi.org/project/libQasm/)
+[![API docs](https://readthedocs.org/projects/libqasm/badge/?version=latest)](https://libqasm.readthedocs.io/en/latest/)
+
 ## Dependencies
 * Flex (> 2.6)
 * Bison (> 3.0)
@@ -57,14 +61,26 @@ Invoke-BatchFile "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\
 Install from the project root directory as follows:
 
 ```
-python cleanme.py
 python -m pip install .
+```
+
+or if you'd rather use conda:
+
+```
+conda build python/conda
+conda install libqasm --use-local
 ```
 
 You can test if it works using
 
 ```
 python -m unittest discover -s src/tests -v
+```
+
+or, with `pytest` if you prefer,
+
+```
+python -m pytest
 ```
 
 Now you should be able to `import libQasm` to use the bindings for the original API. The new API doesn't have Python bindings yet.
